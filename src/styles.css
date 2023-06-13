@@ -1,0 +1,353 @@
+/*
+    "#048740" Santos
+    "#ffffff" Blanco
+    "#0057a9" Azul Tec 1
+    "#13147e" Azul Tec 2
+    "#7b95ad" Azul Light
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* 아래에서 위로 페이드 인 */
+.sa-up {
+  transform: translate(0, 100px);
+}
+/* 위에서 아래로 페이드 인 */
+.sa-down {
+  transform: translate(0, -100px);
+}
+/* 왼쪽에서 오른쪽으로 페이드 인 */
+.sa-right {
+  transform: translate(-100px, 0);
+}
+/* 오른쪽에서 왼쪽으로 페이드 인 */
+.sa-left {
+  transform: translate(100px, 0);
+}
+/* 왼쪽으로 회전하면서 페이드 인 */
+.sa-rotateL {
+  transform: rotate(180deg);
+}
+/* 오른쪽으로 회전하면서 페이드 인 */
+.sa-rotateR {
+  transform: rotate(-180deg);
+}
+/* 작아진 상태에서 커지면서 페이드 인 */
+.sa-scaleUp {
+  transform: scale(0.5);
+}
+/* 커진 상태에서 작아지면서 페이드 인 */
+.sa-scaleDown {
+  transform: scale(1.5);
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+  /* animation-duration: 3s;
+  animation-name: slidein; */
+  /* animation-iteration-count: infinite; */
+}
+
+.letterEffectLeft {
+  animation-name: slideinLeft;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  /* animation-direction: alternate; */
+}
+@keyframes slideinLeft {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.letterEffectRight {
+  animation-name: slideinRight;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  /* animation-direction: alternate; */
+}
+@keyframes slideinRight {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: "DM Serif Display", serif;
+}
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+@font-face {
+  font-family: "Cafe24ClassicType-Regular";
+  src: url("./fonts/Cafe24Classictype.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JSongMyung-Regular-KO";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JSongMyung-Regular-KO.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "lightsFont";
+  src: url("./fonts/빛의계승자체Bold.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMDOHYEON";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BMHANNAPro";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SLEIGothicTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LINESeedKR-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Handon3gyeopsal600g";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal600g.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+}
+
+body * {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+a:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.03);
+}
+
+/* sizingUpBox */
+.sizingUpBox {
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.sizingUpBox:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.03);
+}
+
+/* sizingUpImg */
+.sizingUpImg {
+  overflow: hidden;
+}
+.sizingUpImg img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.sizingUpImg:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* App */
+.appA {
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation */
+.navbar.colorChange {
+  background-color: #0a0a0a;
+  /* box-shadow: 0px 3px 3px black; */
+}
+
+/* Title */
+.title span {
+  font-family: "Handon3gyeopsal600g";
+}
+.smallTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Contact */
+.contactIcons {
+  display: flex;
+  justify-content: space-between;
+}
+.contactIcon > a {
+  color: #13147e;
+}
+.dialogContactIcon > a {
+  color: #13147e;
+}
+
+/* Home */
+.homePage {
+  width: 100vw;
+}
+.homeImg {
+  max-width: 85%;
+}
+
+.homeLetter {
+  /* display: flex;
+  justify-content: flex-end; */
+  /* height: 100vh;
+  width: 100vw; */
+
+  /* background-image: url("/public/images/HomeTop.jpg");
+  background-size: cover;
+  background-position: center; */
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+  /* min-height: 100vh; */
+}
+.homeContact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.homeContactIcons {
+  width: 35%;
+  margin: auto;
+}
+
+/* Career */
+.CareerLink {
+  text-decoration: none;
+  color: #1e192b;
+}
+
+/* ALC */
+.ALCContent {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ALCContentLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dialog */
+.dialogTop {
+  /*
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/public/images/projectImg/project1.jpg");
+  background-size: cover;
+  background-position: center;
+*/
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45vh;
+}
+
+.dialogDetail {
+  color: #9b9b9b;
+}
+
+.dialogDetailContent {
+  color: #dedede;
+}
+
+.DialogTitleLink {
+  text-decoration: none;
+  color: #6750a4;
+}
